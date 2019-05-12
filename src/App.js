@@ -1,24 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
+import HolaMundo from './comp/holaMundo/HolaMundo';
 import './App.css';
+import Suma from './comp/suma/suma';
 
 function App() {
+  const handleOnSumar = resultado => console.log(resultado);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/*<HolaMundo nombre={ 'Gonzalo' } onButtonClick={ () => console.log('padre') } />*/}
+      {/*<HolaMundo nombre={ 'Pepe' }  />*/}
+
+      <Suma initialValue1={ 3 } onSumar={ handleOnSumar } />
     </div>
   );
 }
